@@ -21,8 +21,16 @@
 
 
 
-#####user input
-name = input("what's your name?: ")
-age = (input("how old are u buddy?: "))
-print(f"sup {name}")
-print(f"You are {age} years old")
+# #####user input
+# name = input("what's your name?: ")
+# age = (input("how old are u buddy?: "))
+# print(f"sup {name}")
+# print(f"You are {age} years old")
+
+
+# #####if-statement
+# response = input("Would you like some food? (Yes or No): ")
+# if response == "yes":
+#     print("Have some food")
+# else:
+#     print("No food for u then 😭")
