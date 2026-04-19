@@ -164,3 +164,21 @@
 
 
 #####nested loops
+
+# rows = int(input("Enter the # of rows: " ))
+# columns = int(input("Enter the # of columns: " ))
+# symbol = input("Enter a symbol to use: ")
+
+# for i in range(rows):
+#     for j in range(columns):
+#         print(symbol, end=" ")
+#     print()
+
+rows = 5
+
+for i in range(1, rows + 1):
+    for j in range(rows - i):
+        print(" ", end=" ")
+    for k in range(i):
+        print("*", end=" ")
+    print()
