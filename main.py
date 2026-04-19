@@ -241,6 +241,69 @@
 
 
 
+###### 2D collections, 
+# fruits = ["apple","orange","banana","coconut"]
+# vegetables = ["celery","carrots","potatoes"]
+# meats = ["chicken","fish","turkey"]
+
+# groceries = [fruits, vegetables, meats]
+
+# for collection in groceries:    
+#     for food in collection:
+#         print(food, end = " ")
+#     print()
+
+
+
+# num_pad = ((1,2,3),
+#            (4,5,6),
+#            (7,8,9),
+#            ("*",0,"#"))
+
+
+# for row in num_pad:
+#     for num in row:
+#         print(num,end = " ")
+#     print()
+
+
+
+
+
+# #####dictonaries = collection of {key:value} ordered and changeable, no duplicates are allowed
+# capitals = {"USA" : "Washington DC",
+#             "India": "New Delhy",
+#             "China" : "Beijing",
+#             "Russia": "Moscow"}
+
+# print(dir(capitals))
+
+
+# print(capitals.get("USA"))
+
+
+# if capitals.get("Japan"):
+#     print("That capital exists")
+# else:
+#     print("That capital does not exist buddy")
+
+
+# capitals.update({"Germany" : "Berlin"})
+# capitals.update({"USA": "Detroit"})
+# capitals.pop("China")
+# capitals.popitem()
+# capitals.clear()
+
+
+# for key in capitals.keys():
+#     print(key)
+
+
+# for value in capitals.values():
+#     print(value)
+
+# for key,value in capitals.items():
+#     print(f"{key}: {value}")
 
 
 
