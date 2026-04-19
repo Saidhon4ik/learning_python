@@ -187,6 +187,8 @@
 
 
 
+
+
 #####collections Lists[] -- changeable, ordered
 # tuples() - ordered and unchangeable, duplicates ok
 #  sets{} -  unordered and immutable, but fine to add or remove, no duplicates
@@ -224,7 +226,21 @@
 
 
 
-fruits = ("apple","orange","banana","coconut")
-print("pineapple" in fruits)
-print(fruits.index("apple"))
-print(fruits.count("coconut"))
+# fruits = ("apple","orange","banana","coconut")
+# print("pineapple" in fruits)
+# print(fruits.index("apple"))
+# print(fruits.count("coconut"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
