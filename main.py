@@ -174,11 +174,57 @@
 #         print(symbol, end=" ")
 #     print()
 
-rows = 5
+# rows = 5
 
-for i in range(1, rows + 1):
-    for j in range(rows - i):
-        print(" ", end=" ")
-    for k in range(i):
-        print("*", end=" ")
-    print()
+# for i in range(1, rows + 1):
+#     for j in range(rows - i):
+#         print(" ", end=" ")
+#     for k in range(i):
+#         print("*", end=" ")
+#     print()
+
+
+
+
+
+#####collections Lists[] -- changeable, ordered
+# tuples() - ordered and unchangeable, duplicates ok
+#  sets{} -  unordered and immutable, but fine to add or remove, no duplicates
+
+
+
+# fruits = ["apple","banana","orange","coconut"]
+
+# fruits[0] = "pineapple"
+# fruits.append("apple")
+# fruits.remove("orange")
+# fruits.insert(0, "potatoXD")
+# fruits.sort()
+# fruits.reverse()
+# # fruits.clear()
+# print(fruits.index("apple"))
+
+# for fruit in fruits:
+#     print(fruit, end = " ")
+
+
+
+# fruits = {"apple","banana","orange","coconut"}
+
+# fruits.add("pineapple")
+# fruits.remove("apple")
+# fruits.pop() #removes the first one , but it is random
+# fruits.clear()
+
+
+
+
+# print(fruits)
+
+
+
+
+fruits = ("apple","orange","banana","coconut")
+print("pineapple" in fruits)
+print(fruits.index("apple"))
+print(fruits.count("coconut"))
