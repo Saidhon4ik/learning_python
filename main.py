@@ -363,3 +363,11 @@ print(cards)
 
 # print(number)
 # print(option) 
+
+
+def happy_birthday(name,age):
+    print(f"Happy birthday {name}")
+    print(f"you are now, {age} years old")
+
+
+happy_birthday("Bro",40)
