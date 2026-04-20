@@ -365,9 +365,59 @@ print(cards)
 # print(option) 
 
 
-def happy_birthday(name,age):
-    print(f"Happy birthday {name}")
-    print(f"you are now, {age} years old")
 
 
-happy_birthday("Bro",40)
+
+
+# #####functions, basics
+
+# def happy_birthday(name,age):
+#     print(f"Happy birthday {name}")
+#     print(f"you are now, {age} years old")
+
+
+# happy_birthday("Bro",40)
+
+
+
+def display_invoice(username, amount, due_date):
+    print(f"Hello {username}")
+    print(f"your bill of ${amount:.2f} is due: {due_date} ")
+
+display_invoice("Bro Code", 42.50, "01/01/2001")
+
+
+
+# #return
+# def add(x,y):
+#     z = x+y
+#     return z
+
+# def substract(x,y):
+#     z = x-y
+#     return z
+
+# def divise(x,y):
+#     z = x/y
+#     return z
+
+# def multilpy(x,y):
+#     z = x*y
+#     return z
+
+
+# print(add(1,2))
+# print(substract(1,2))
+# print(multilpy(1,2))
+# print(divise(1,2))
+
+
+
+def create_name(first,last):
+    first = first.capitalize()
+    last = last.capitalize()
+    return first + " " + last   
+
+full_name = create_name("bro","code")
+
+print(full_name)
