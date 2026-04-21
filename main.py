@@ -346,15 +346,15 @@
 
 
 
-import random
-low = 1 
-high = 100
+# import random
+# low = 1 
+# high = 100
 
-options = ("rock","paper","scissors")
-cards = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
+# options = ("rock","paper","scissors")
+# cards = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
 
-random.shuffle(cards)
-print(cards)
+# random.shuffle(cards)
+# print(cards)
 
 # option = random.choice(options)
 
@@ -380,11 +380,11 @@ print(cards)
 
 
 
-def display_invoice(username, amount, due_date):
-    print(f"Hello {username}")
-    print(f"your bill of ${amount:.2f} is due: {due_date} ")
+# def display_invoice(username, amount, due_date):
+#     print(f"Hello {username}")
+#     print(f"your bill of ${amount:.2f} is due: {due_date} ")
 
-display_invoice("Bro Code", 42.50, "01/01/2001")
+# display_invoice("Bro Code", 42.50, "01/01/2001")
 
 
 
@@ -413,11 +413,122 @@ display_invoice("Bro Code", 42.50, "01/01/2001")
 
 
 
-def create_name(first,last):
-    first = first.capitalize()
-    last = last.capitalize()
-    return first + " " + last   
+# def create_name(first,last):
+#     first = first.capitalize()
+#     last = last.capitalize()
+#     return first + " " + last   
 
-full_name = create_name("bro","code")
+# full_name = create_name("misha","potatovich")
 
-print(full_name)
+# print(full_name)
+
+
+
+
+# ##### default argument
+# def net_price(list_price,discount=0, tax=0.05):
+#     return list_price * (1-discount) * (1+tax)
+
+# print(net_price(500))
+# print(net_price(500,0.1))
+# print(net_price(500,0.1,0))
+
+
+# import time
+
+# def count(end, start=0):
+#     for x in range(start, end+1):
+#         print(x)
+#         time.sleep(1)
+
+
+# count(10)
+
+
+# #####keyword arguments
+
+# def hello(greeting,title,first,last):
+#     print(f"{greeting} {title} {first} {last}")
+
+# hello(greeting= "Hello",title = "Mr.", first = "Spongebob", last ="Squarepants") 
+
+
+# for x in range(1,11):
+#     print(x, end = " ")
+
+
+
+# print("1","2","3","4","5", sep= "@")
+
+
+
+# def get_phone(country_code,area,first,last):
+#     return f"{country_code}-{area}-{first}-{last}"
+
+# phone = get_phone(country_code=1,area=123,first=456, last=7890)
+
+# print(phone)
+
+
+
+
+#lowkey, args is tuple and kwargs is a dictionary. Ig that's the most important shyt to remember. we gotta sorta open them up
+# if we want to use them gng
+
+
+
+
+#####*args 
+# def add(*args):
+#     total = 0
+#     for arg in args:
+#         total += arg
+#     return total
+
+# print(add(1,2,3,4,5))
+
+
+# def display_name(*args):
+#     for arg in args:
+#         print(arg, end= " ")
+
+# display_name("Dr.","Spongebob","Squarepants")
+
+
+
+
+# #####**kwargs
+# def print_address(**kwargs):
+#     for key,value in kwargs.items():
+#         print(key,value)
+
+# print_address(street="123 Potato St.",
+#               apt = "100",
+#               city ="Detroit",
+#               state ="MI",
+#               zip ="54321")
+
+
+def shipping_label(*args,**kwargs):
+    for arg in args:
+        print(arg, end = " ")
+    print()
+
+    if "apt" in kwargs:
+         print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+    else:
+         print(f"{kwargs.get('street')}")
+
+   
+    print(f"{kwargs.get('city')} {kwargs.get('state')} {kwargs.get('zip')}")
+
+
+shipping_label("Dr.","Spongebob","Squarepants","III",
+               street = "123 Banana St.",
+               apt = "#100",
+               city = "Detroit",
+               state = "Texas",
+               zip = "54321")
+
+
+#I actually like args and kwargs, tho, i guess, they are a bit tricky
