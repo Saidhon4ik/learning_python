@@ -509,26 +509,63 @@
 #               zip ="54321")
 
 
-def shipping_label(*args,**kwargs):
-    for arg in args:
-        print(arg, end = " ")
-    print()
+# def shipping_label(*args,**kwargs):
+#     for arg in args:
+#         print(arg, end = " ")
+#     print()
 
-    if "apt" in kwargs:
-         print(f"{kwargs.get('street')} {kwargs.get('apt')}")
-    else:
-         print(f"{kwargs.get('street')}")
+#     if "apt" in kwargs:
+#          print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+#     else:
+#          print(f"{kwargs.get('street')}")
 
    
-    print(f"{kwargs.get('city')} {kwargs.get('state')} {kwargs.get('zip')}")
+#     print(f"{kwargs.get('city')} {kwargs.get('state')} {kwargs.get('zip')}")
 
 
-shipping_label("Dr.","Spongebob","Squarepants","III",
-               street = "123 Banana St.",
-               apt = "#100",
-               city = "Detroit",
-               state = "Texas",
-               zip = "54321")
+# shipping_label("Dr.","Spongebob","Squarepants","III",
+#                street = "123 Banana St.",
+#                apt = "#100",
+#                city = "Detroit",
+#                state = "Texas",
+#                zip = "54321")
 
 
 #I actually like args and kwargs, tho, i guess, they are a bit tricky
+
+
+
+
+# #####iterables 
+##TUPLES AND LISTS
+# numbers = (1,2,3,4,5)
+
+# # for number in reversed(numbers):
+# #     print(number)
+
+# for number in numbers:
+#     print(number)
+
+
+
+# fruits = {"apple","orange","coconut","banana"}
+
+# for fruit in fruits:
+#     print(fruit)
+
+
+###WITH STRING
+# name = "Bro Code"
+
+# for character in name:
+#     print(character, end = ' ')
+
+
+
+my_dictionary = {"A" : 1,
+                 "B" : 2,
+                 "C" : 3}
+
+
+for key,value in my_dictionary.items():
+    print(f"{key}:{value}")
