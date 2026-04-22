@@ -562,10 +562,60 @@
 
 
 
-my_dictionary = {"A" : 1,
-                 "B" : 2,
-                 "C" : 3}
+# my_dictionary = {"A" : 1,
+#                  "B" : 2,
+#                  "C" : 3}
 
 
-for key,value in my_dictionary.items():
-    print(f"{key}:{value}")
+# for key,value in my_dictionary.items():
+#     print(f"{key}:{value}")
+
+
+
+###Membership operators = used to test if there's a value in a sequence
+
+
+# #in a string
+# word = "APPLE"
+
+# letter = input("Guess a letter in a secret word: ")
+# if letter in word:
+#     print(f"There is a {letter}")
+# else:
+#     print(f"{letter} was not found in our secret word")
+
+
+
+# #in a set
+# students = {"Spongebob","Patrick","Sandy"}
+# student = input("Enter the name of the student: ")
+
+# if student in students:
+#     print(f"{student} is a student")
+
+# else:
+#     print(f"{student} was not found")
+
+
+# #in dictionaries
+
+# grades = {"Sandy":"A",
+#           "Squidward":"B",
+#           "Spongebob" : "C",
+#           "Patrick": "D"}
+
+# student = input("Enter the name of the student: ")
+# if student in grades:
+#     print(f"{student}'s grade is {grades[student]}")
+# else:
+#     print(f"{student} was not found")
+
+
+
+# #idk
+# email = "BroCode@gmail.com"
+
+# if "@" in email and "." in email:
+#     print("Valid email")
+# else:
+#     print("Invalid email")
