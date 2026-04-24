@@ -708,3 +708,42 @@
 # print(m.pi)
 
 
+
+# #####scope resolution
+# #variable scope is where variable is visible and accessible
+# #scope resolution (LEGB - briefly for the next thing ---> ) Local -> Enclosed -> Global -> Built-in
+# def func1():
+#     x = 1
+#     print(x)
+
+# def func2():
+#     x = 2 
+#     print(x)
+
+# x = 3
+
+# func1()
+# func2()
+
+
+# from math import e
+
+# def func3():
+#     print(e)
+
+# e = 3 
+# func3()
+
+
+
+
+#### if name == "__main__": <----- what is it?
+#it usually means   that that code can be imported 
+#functions and classes in this module can be reused without the main block of code executing
+
+
+def main():
+    #some stuff
+
+if __name__ == "__main__":
+    main()      
