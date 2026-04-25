@@ -742,8 +742,4 @@
 #functions and classes in this module can be reused without the main block of code executing
 
 
-def main():
-    #some stuff
-
-if __name__ == "__main__":
-    main()      
+####banking prog
