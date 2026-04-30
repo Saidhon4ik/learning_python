@@ -884,47 +884,110 @@
 # dog.sleep()
 
 
-####multiple and multilevel inheritance
-class Animal:
+# ####multiple and multilevel inheritance
+# class Animal:
 
-    def __init__(self,name):
-        self.name = name
+#     def __init__(self,name):
+#         self.name = name
 
-    def eat(self):
-        print(f"This {self.name} is eating")
-    def sleep(self):
-        print(f"This {self.name} is sleeping")
-class Prey(Animal):
-    def flee(self):
-        print(f"This {self.name} is fleeing")
-class Predator(Animal):
-    def hunt(self):
-        print(f"This {self.name} is hunting")
+#     def eat(self):
+#         print(f"This {self.name} is eating")
+#     def sleep(self):
+#         print(f"This {self.name} is sleeping")
+# class Prey(Animal):
+#     def flee(self):
+#         print(f"This {self.name} is fleeing")
+# class Predator(Animal):
+#     def hunt(self):
+#         print(f"This {self.name} is hunting")
 
-class Rabbit(Prey):
-    pass
+# class Rabbit(Prey):
+#     pass
 
-class Hawk(Predator):
-    pass
+# class Hawk(Predator):
+#     pass
 
-class Fih(Predator,Prey):
-    pass
+# class Fih(Predator,Prey):
+#     pass
 
 
-rabbit = Rabbit("Bugs")
-hawk = Hawk("Tony")
-fih = Fih("Nemo")
+# rabbit = Rabbit("Bugs")
+# hawk = Hawk("Tony")
+# fih = Fih("Nemo")
 
-rabbit.flee()
-hawk.hunt()
+# rabbit.flee()
+# hawk.hunt()
+# print()
+# fih.hunt()
+# fih.flee()
+
+
+# rabbit.eat()
+# rabbit.sleep()
+
+# fih.eat()
+# fih.sleep()
+
+
+
+#super() function
+
+class Shape:
+    def __init__(self,color,is_filled):
+        self.color = color
+        self.is_filled = is_filled
+
+    def describe(self):
+        print(f"It is {self.color} and {'filled' if self.is_filled == True else 'not filled'}")
+
+class Circle(Shape):
+    def __init__(self,color,is_filled,radius):
+        super().__init__(color, is_filled)
+        self.radius = radius
+
+    def describe(self):
+        print(f"It is a circle with an area of {3.14 * self.radius * self.radius} cm^2")
+        super().describe()
+
+class Square(Shape):
+    def __init__(self,color,is_filled,width,):
+        super().__init__(color, is_filled)
+        self.width = width
+
+    def describe(self):
+        print(f"It is a square with an area of {self.width * self.width/2} cm^2")
+        super().describe()
+            
+class Trinagle(Shape):
+    def __init__(self,color,is_filled,width, height):
+        super().__init__(color, is_filled)
+        self.width = width
+        self.height = height
+
+
+    def describe(self):
+        print(f"It is a triangle with an area of {self.width * self.width/2} cm^2")
+        super().describe()
+
+
+circle = Circle(color = "red", is_filled= True, radius= 5)
+square = Square(color = "blue", is_filled= False, width= 5)
+triangle = Trinagle(color = "white", is_filled = False, width = 3, height = 4)
+
+
+print(circle.color)
+print(circle.is_filled)
+print(circle.radius)
+
+
 print()
-fih.hunt()
-fih.flee()
+print(square.color)
+print(square.is_filled)
+print(square.width)
+print()
 
 
-rabbit.eat()
-rabbit.sleep()
 
-fih.eat()
-fih.sleep()
-
+square.describe()
+triangle.describe()
+circle.describe()
