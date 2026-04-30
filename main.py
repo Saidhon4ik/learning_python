@@ -853,32 +853,78 @@
 
 
 
-####Inheritance
+# ####Inheritance
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name
+#         self.is_alive = True
+
+#     def eat(self):
+#                 print(f"{self.name} is eating")
+
+#     def sleep(self):
+#           print(f"{self.name} is sleeping")
+
+
+# class Dog(Animal):
+#       pass
+# class Cat(Animal):
+#       pass
+# class Mouse(Animal):
+#       pass
+
+
+# dog = Dog("Steve")
+# cat = Cat("Tom")
+# mouse = Mouse("Jerry")
+
+# print(dog.name)
+# print(dog.is_alive)
+# dog.eat()
+# dog.sleep()
+
+
+####multiple and multilevel inheritance
 class Animal:
+
     def __init__(self,name):
         self.name = name
-        self.is_alive = True
 
     def eat(self):
-                print(f"{self.name} is eating")
-
+        print(f"This {self.name} is eating")
     def sleep(self):
-          print(f"{self.name} is sleeping")
+        print(f"This {self.name} is sleeping")
+class Prey(Animal):
+    def flee(self):
+        print(f"This {self.name} is fleeing")
+class Predator(Animal):
+    def hunt(self):
+        print(f"This {self.name} is hunting")
+
+class Rabbit(Prey):
+    pass
+
+class Hawk(Predator):
+    pass
+
+class Fih(Predator,Prey):
+    pass
 
 
-class Dog(Animal):
-      pass
-class Cat(Animal):
-      pass
-class Mouse(Animal):
-      pass
+rabbit = Rabbit("Bugs")
+hawk = Hawk("Tony")
+fih = Fih("Nemo")
+
+rabbit.flee()
+hawk.hunt()
+print()
+fih.hunt()
+fih.flee()
 
 
-dog = Dog("Steve")
-cat = Cat("Tom")
-mouse = Mouse("Jerry")
+rabbit.eat()
+rabbit.sleep()
 
-print(dog.name)
-print(dog.is_alive)
-dog.eat()
-dog.sleep()
+fih.eat()
+fih.sleep()
+
