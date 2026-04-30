@@ -930,64 +930,112 @@
 
 
 
-#super() function
+# ######super() function
 
-class Shape:
-    def __init__(self,color,is_filled):
-        self.color = color
-        self.is_filled = is_filled
+# class Shape:
+#     def __init__(self,color,is_filled):
+#         self.color = color
+#         self.is_filled = is_filled
 
-    def describe(self):
-        print(f"It is {self.color} and {'filled' if self.is_filled == True else 'not filled'}")
+#     def describe(self):
+#         print(f"It is {self.color} and {'filled' if self.is_filled == True else 'not filled'}")
+
+# class Circle(Shape):
+#     def __init__(self,color,is_filled,radius):
+#         super().__init__(color, is_filled)
+#         self.radius = radius
+
+#     def describe(self):
+#         print(f"It is a circle with an area of {3.14 * self.radius * self.radius} cm^2")
+#         super().describe()
+
+# class Square(Shape):
+#     def __init__(self,color,is_filled,width,):
+#         super().__init__(color, is_filled)
+#         self.width = width
+
+#     def describe(self):
+#         print(f"It is a square with an area of {self.width * self.width/2} cm^2")
+#         super().describe()
+            
+# class Trinagle(Shape):
+#     def __init__(self,color,is_filled,width, height):
+#         super().__init__(color, is_filled)
+#         self.width = width
+#         self.height = height
+
+
+#     def describe(self):
+#         print(f"It is a triangle with an area of {self.width * self.width/2} cm^2")
+#         super().describe()
+
+
+# circle = Circle(color = "red", is_filled= True, radius= 5)
+# square = Square(color = "blue", is_filled= False, width= 5)
+# triangle = Trinagle(color = "white", is_filled = False, width = 3, height = 4)
+
+
+# print(circle.color)
+# print(circle.is_filled)
+# print(circle.radius)
+
+
+# print()
+# print(square.color)
+# print(square.is_filled)
+# print(square.width)
+# print()
+
+
+
+# square.describe()
+# triangle.describe()
+# circle.describe()
+
+
+
+
+
+
+######Polymorphism
+from abc import ABC, abstractmethod
+    
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
 
 class Circle(Shape):
-    def __init__(self,color,is_filled,radius):
-        super().__init__(color, is_filled)
+    def __init__(self,radius):
         self.radius = radius
 
-    def describe(self):
-        print(f"It is a circle with an area of {3.14 * self.radius * self.radius} cm^2")
-        super().describe()
+    def area(self):
+        return 3.14 * self.radius ** 2
 
 class Square(Shape):
-    def __init__(self,color,is_filled,width,):
-        super().__init__(color, is_filled)
-        self.width = width
+    def __init__(self,side):
+        self.side = side
 
-    def describe(self):
-        print(f"It is a square with an area of {self.width * self.width/2} cm^2")
-        super().describe()
-            
-class Trinagle(Shape):
-    def __init__(self,color,is_filled,width, height):
-        super().__init__(color, is_filled)
-        self.width = width
+    def area(self):
+        return self.side ** 2
+
+class Triangle(Shape):  
+    def __init__(self,base, height):
+        self.base = base
         self.height = height
 
+    1
+    def area(self):
+        return self.base * self.height * 0.5
 
-    def describe(self):
-        print(f"It is a triangle with an area of {self.width * self.width/2} cm^2")
-        super().describe()
-
-
-circle = Circle(color = "red", is_filled= True, radius= 5)
-square = Square(color = "blue", is_filled= False, width= 5)
-triangle = Trinagle(color = "white", is_filled = False, width = 3, height = 4)
-
-
-print(circle.color)
-print(circle.is_filled)
-print(circle.radius)
+class Pizza(Circle):
+    def __init__(self,topping,radius):
+        super().__init__(radius)
+        self.topping = topping
 
 
-print()
-print(square.color)
-print(square.is_filled)
-print(square.width)
-print()
+shapes = [Circle(4), Square(5), Triangle(3,4),Pizza("peperoni",5)]
 
-
-
-square.describe()
-triangle.describe()
-circle.describe()
+for shape in shapes:
+    print(f"Area is {shape.area()} cm^2")
