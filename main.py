@@ -801,30 +801,52 @@
 
 
 
-#OOP in python
-from Car import Car
-car1 = Car("Mustang",2024,"Red",False)
-car2 = Car("Nexia",2016,"Blue",True)
-car3 = Car("Matiz",2012,"White",True)
+# ######OOP in python
+# from Car import Car
+# car1 = Car("Mustang",2024,"Red",False)
+# car2 = Car("Nexia",2016,"Blue",True)
+# car3 = Car("Matiz",2012,"White",True)
 
 
-print(car1.color)
-print()
+# print(car1.color)
+# print()
 
 
 
-car1.drive()
-car2.drive()
-car3.drive()
+# car1.drive()
+# car2.drive()
+# car3.drive()
 
 
-print()
-car1.stop()
-car2.stop()
-car3.stop()
+# print()
+# car1.stop()
+# car2.stop()
+# car3.stop()
 
 
-print()
-car1.describe()
-car2.describe()
-car3.describe()
+# print()
+# car1.describe()
+# car2.describe()
+# car3.describe()
+
+
+
+
+#class variables
+class Student:
+
+    class_year = 2024
+    num_students = 0
+
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        Student.num_students += 1
+
+student1 = Student("Spongebob", 30)
+student2 = Student("Patrick", 35)
+student3 = Student("Squidward" , 38)
+student4 = Student("Mr.Crabs", 45)
+
+
+print(f"My graduating class of {Student.class_year} has {Student.num_students} students")
