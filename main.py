@@ -850,3 +850,35 @@ student4 = Student("Mr.Crabs", 45)
 
 
 print(f"My graduating class of {Student.class_year} has {Student.num_students} students")
+
+
+
+####Inheritance
+class Animal:
+    def __init__(self,name):
+        self.name = name
+        self.is_alive = True
+
+    def eat(self):
+                print(f"{self.name} is eating")
+
+    def sleep(self):
+          print(f"{self.name} is sleeping")
+
+
+class Dog(Animal):
+      pass
+class Cat(Animal):
+      pass
+class Mouse(Animal):
+      pass
+
+
+dog = Dog("Steve")
+cat = Cat("Tom")
+mouse = Mouse("Jerry")
+
+print(dog.name)
+print(dog.is_alive)
+dog.eat()
+cat.sleep()
