@@ -1141,53 +1141,116 @@
 
 
 
-#####magic methods
-class Book:
-    def __init__(self,title,author,num_pages):
-        self.title = title
-        self.author = author
-        self.num_pages = num_pages
+# #####magic methods
+# class Book:
+#     def __init__(self,title,author,num_pages):
+#         self.title = title
+#         self.author = author
+#         self.num_pages = num_pages
 
-    def __str__(self):
-        return f"'{self.title}' by {self.author}"
+#     def __str__(self):
+#         return f"'{self.title}' by {self.author}"
     
-    def __eq__(self, other):
-        return self.title == other.title and self.author == other.author
-    
-
-    def __lt__(self, other):
-        return self.num_pages < other.num_pages
+#     def __eq__(self, other):
+#         return self.title == other.title and self.author == other.author
     
 
-    def __add__(self, other):
-        return self.num_pages + other.num_pages
+#     def __lt__(self, other):
+#         return self.num_pages < other.num_pages
     
 
-    def __contains__(self, keyword):
-        return keyword in self.title or keyword in self.author
+#     def __add__(self, other):
+#         return self.num_pages + other.num_pages
     
 
-    def __getitem__(self, key):
-        if key == 'title':
-            return self.title
-        elif key == 'author':
-            return self.author
+#     def __contains__(self, keyword):
+#         return keyword in self.title or keyword in self.author
+    
+
+#     def __getitem__(self, key):
+#         if key == 'title':
+#             return self.title
+#         elif key == 'author':
+#             return self.author
         
-        elif key == 'num_pages':
-            return self.num_pages
+#         elif key == 'num_pages':
+#             return self.num_pages
+#         else:
+#             return f"Key {key} was not found"
+
+
+# book1 = Book("The Hobbit","J.R.R Tolkien",310)
+# book2 = Book("Harry Potter and the Philosopher stone","J.K Rowling",223)
+# book3 = Book("The Lion,The Witch, and The Wardrobe","C.S Lewis",172)
+
+# print(book1)
+# print(book1 == book2)
+# print(book1 > book2 )
+# print(book1 + book2)
+
+# print("Hobbit" in book1)
+
+# print(book1['title'])
+
+#getter and setter methods 
+#@property
+class Rectangle:
+    def __init__(self,width, height):
+        self._height = height
+        self._width = width
+
+    @property
+    def width(self):
+        return f"{self._width:.1f} cm"
+
+
+    @property
+    def height(self):
+        return f"{self._height:.1f} cm"    
+    
+
+
+    @width.setter
+    def width(self,new_width):
+        if new_width > 0:
+            self._width = new_width
         else:
-            return f"Key {key} was not found"
+            print("Width mmust be greater than zero")
+
+    @height.setter
+    def height(self,new_height):
+        if new_height > 0:
+            self._height = new_height
+        else:
+            print("Height mmust be greater than zero")
 
 
-book1 = Book("The Hobbit","J.R.R Tolkien",310)
-book2 = Book("Harry Potter and the Philosopher stone","J.K Rowling",223)
-book3 = Book("The Lion,The Witch, and The Wardrobe","C.S Lewis",172)
 
-print(book1)
-print(book1 == book2)
-print(book1 > book2 )
-print(book1 + book2)
 
-print("Hobbit" in book1)
+    @width.deleter
+    def width(self):
+        del self._width
+        print("Width has been deleted")
 
-print(book1['title'])
+    @height.deleter
+    def height(self):
+        del self._height
+        print("height has been deleted")
+
+
+
+
+rectangle = Rectangle(3,4)
+
+
+
+
+rectangle.width = 4
+rectangle.height = 5
+
+
+# del rectangle.width
+# del rectangle.height
+
+print(rectangle.width)
+print(rectangle.height)
