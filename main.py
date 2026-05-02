@@ -1260,3 +1260,28 @@
 
 # print(rectangle.width)
 # print(rectangle.height)
+
+
+
+
+
+
+#####exception in python
+
+#try except finally(default value)
+
+
+try:
+    number = input("enter a number: ")
+    number = int(number)
+
+    print(1/number)
+except ZeroDivisionError:
+    print("you cannot divide by zero, Idiot")
+except ValueError:
+    print("Enter an integer")
+except Exception:
+    print("Something went wrong")
+finally:
+    print("clean up here")
+    #it is usually used in file handling
