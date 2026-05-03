@@ -1266,22 +1266,41 @@
 
 
 
-#####exception in python
+# #####exception in python
 
-#try except finally(default value)
+# #try except finally(default value)
 
 
-try:
-    number = input("enter a number: ")
-    number = int(number)
+# try:
+#     number = input("enter a number: ")
+#     number = int(number)
 
-    print(1/number)
-except ZeroDivisionError:
-    print("you cannot divide by zero, Idiot")
-except ValueError:
-    print("Enter an integer")
-except Exception:
-    print("Something went wrong")
-finally:
-    print("clean up here")
-    #it is usually used in file handling
+#     print(1/number)
+# except ZeroDivisionError:
+#     print("you cannot divide by zero, Idiot")
+# except ValueError:
+#     print("Enter an integer")
+# except Exception:
+#     print("Something went wrong")
+# finally:
+#     print("clean up here")
+#     #it is usually used in file handling
+
+
+
+
+#Python file detection
+
+import os
+
+file_path = "learning_python/test.txt"
+
+if os.path.exists(file_path):
+    print(f"The location '{file_path}' exists")
+
+    if os.path.isfile(file_path):
+        print("That is a file")
+    elif os.path.isdir(file_path):
+        print("That is a directory")
+else:
+    print("That location does not exist")
