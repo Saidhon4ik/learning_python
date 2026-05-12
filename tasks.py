@@ -70,3 +70,20 @@
 #             for j in range(i+1,len(nums)):
 #                 if nums[i] + nums[j] == target:
 #                     return [i,j]
+
+
+
+
+
+# #https://leetcode.com/problems/two-sum/ not done yet as i have to understand it more properly
+# nums = [3,4,5,1]
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         h = {}
+#         for i in range(len(nums)):
+#             h[nums[i]] = i
+#         for i in range(len(nums)):
+#             y = target - nums[i]
+        
+#         if y in h and h[y]  != i:
+#             return [i,h[y]]
