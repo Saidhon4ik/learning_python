@@ -90,26 +90,51 @@
 
 
 
-#example of a binary search
-def binary_search(list,target):
-        low = 0
-        high = len(list) - 1
+# #example of a binary search
+# def binary_search(list,target):
+#         low = 0
+#         high = len(list) - 1
 
-        while low <= high:
-                mid = (low+high)//2     
-                guess = list[mid]
+#         while low <= high:
+#                 mid = (low+high)//2     
+#                 guess = list[mid]
 
-                if guess == target:
-                        return mid
-                elif guess > target:
-                        high = mid - 1
-                elif guess < target:
-                        low = mid + 1
-        return None
+#                 if guess == target:
+#                         return mid
+#                 elif guess > target:
+#                         high = mid - 1
+#                 elif guess < target:
+#                         low = mid + 1
+#         return None
 
-my_list = [1,3,5,7,9]
+# my_list = [1,3,5,7,9]
 
 
-print(binary_search(my_list,1))
-print(binary_search(my_list,-1))
-print(binary_search(my_list,3))
+# print(binary_search(my_list,1))
+# print(binary_search(my_list,-1))
+# print(binary_search(my_list,3))
+
+
+
+
+
+#===============================#
+def findSmallest(arr):
+        smallest = arr[0]
+        smallest_index = 0
+        for i in range(1,len(arr)):
+                if arr[i] < smallest:
+                        smallest = arr[i]
+                        smallest_index = i
+        return smallest_index
+#===============================#
+#Selection sort
+def selectionSort(arr):
+        newArr = []
+        for _ in range(0,len(arr)):
+                smallest = findSmallest(arr)
+                newArr.append(arr.pop(smallest))
+        return newArr
+#===============================#
+print(selectionSort( [1,2,3,4,5,24,75,43,27,745,13]))
+#===============================#
