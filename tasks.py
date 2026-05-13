@@ -138,3 +138,39 @@ def selectionSort(arr):
 #===============================#
 print(selectionSort( [1,2,3,4,5,24,75,43,27,745,13]))
 #===============================#
+
+
+
+
+
+
+
+
+#================#
+#recursion for countdown from  5 to 0
+def countdown(n):
+        print(n)
+        if n == 0: return 0
+        countdown(n-1)
+#================#
+countdown(5)
+#================#
+
+
+
+#===================================#
+def quicksort(arr):
+        if len(arr) <= 1: return arr        
+        pivot = arr[0]
+        less = []
+        greater = []
+#===================================#
+        for item in arr:
+                if item<pivot:
+                        less.append(item)
+                elif item>pivot:
+                        greater.append(item)
+        return quicksort(less) + [pivot] + quicksort(greater)
+#===================================#
+print(quicksort([3, 1, 5, 2, 4]))
+#===================================#
