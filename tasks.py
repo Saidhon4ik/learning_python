@@ -75,19 +75,6 @@
 
 
 
-# #https://leetcode.com/problems/two-sum/ not done yet as i have to understand it more properly
-# nums = [3,4,5,1]
-# class Solution:
-#     def twoSum(self, nums: List[int], target: int) -> List[int]:
-#         h = {}
-#         for i in range(len(nums)):
-#             h[nums[i]] = i
-#         for i in range(len(nums)):
-#             y = target - nums[i]
-        
-#         if y in h and h[y]  != i:
-#             return [i,h[y]]
-
 
 
 # #example of a binary search
@@ -113,6 +100,8 @@
 # print(binary_search(my_list,1))
 # print(binary_search(my_list,-1))
 # print(binary_search(my_list,3))
+
+
 
 
 
@@ -146,6 +135,8 @@ print(selectionSort( [1,2,3,4,5,24,75,43,27,745,13]))
 
 
 
+
+
 #================#
 #recursion for countdown from  5 to 0
 def countdown(n):
@@ -155,6 +146,9 @@ def countdown(n):
 #================#
 countdown(5)
 #================#
+
+
+
 
 
 
@@ -174,3 +168,28 @@ def quicksort(arr):
 #===================================#
 print(quicksort([3, 1, 5, 2, 4]))
 #===================================#
+
+
+
+
+
+
+
+
+
+#================================================#
+#https://leetcode.com/problems/two-sum/ I understood how to do it. lwk cool
+nums = [3,4,5,1]
+class Solution:
+    def twoSum(self, nums, target):
+        hashmap = {} #O(1)
+        for i,num in enumerate(nums):
+                seen = target - num
+                if seen in hashmap:
+                       return [hashmap[seen], i]
+                elif seen not in hashmap:
+                       hashmap[num] = i
+        return None
+#================================================#
+print(Solution().twoSum([2,7,9,13,15],9))
+#================================================#
