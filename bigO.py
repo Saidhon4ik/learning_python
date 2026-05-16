@@ -150,7 +150,7 @@ while nums:
 
 
 
-#!GARBAGE. NOTHING ELSE TO SAY FR, THAT'S A FKING GARBAGE
+
 # #=========================#
 # #O(2**n)
 # # Recursion,  tree height n, two branches
